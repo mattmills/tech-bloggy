@@ -1,0 +1,25 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Technical Difficulties</title>
+    <link>http://unnaturaldipthongs.com/rss/</link>
+    <language>en-us</language>
+    <ttl>40</ttl>
+    <description>A blog about my super-nerdy hobbies. I'm building a watch.</description>
+    {% for post in site.posts %}
+		<item>
+		          <title>{{ post.title | xml_escape }}</title>
+		          <description>
+		          	{{ post.content | xml_escape }}
+		          </description>
+		          <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+		          <guid>{{ post.url }}</guid>
+		          <link>{{ post.url }}</link>
+		        </item>
+		{% endfor %}
+
+	</channel>
+</rss>
