@@ -15,7 +15,7 @@ I hesitate to go into too much detail. There's a lot of this that's arbitrary, o
 
 As hinted in an earlier post, the heart of the beast is an RFduino, an Arduino compatible ARM and Bluetooth LE system on chip (SoC). The prototype is built on an an Adafruit perma-proto, but you could proably use any standard perf board. The display is "this one":https://www.adafruit.com/product/1393, which I'm also using for it's voltage regulator. VIN goes to the display, and the rfduino is powered from the 3v pin. I'm using one of their tiny LiPo batteries, the 150mAh, but I think power consumption may be an issue when I get to the radio-using phase, so I also have a 500mAh ready to swap in.
 
-The first draft of thie prototype was... messy.  I sat and thought about every connection, then soldered, then sat and thought some more. This is a fast way to build a watch. This version of the setup worked, for a loose definition of 'work'. I used really long jumper wires, and tried to pack them all together, so, of course, there were shorts. It also made the whole package considerably bigger than I thought it would be. So, kind of a dud.
+The first draft of thie prototype was... messy.  I sat and thought about every connection, then soldered, then sat and thought some more. This is not a fast way to build a watch. This version of the setup worked, for a loose definition of 'work'. I used really long jumper wires, and tried to pack them all together, so, of course, there were shorts. It also made the whole package considerably bigger than I thought it would be. So, kind of a dud.
 
 <div class="center">
   <img src="https://farm3.staticflickr.com/2908/14262519117_a693a22215_h.jpg" alt="second rfduino SMT solder">
@@ -35,4 +35,4 @@ So, what have I learned so far? There is a metric ton of information on how to d
     <img src="https://farm4.staticflickr.com/3871/14262833049_a5a507796d_h.jpg" alt="With clips">
 </div>
 
-But seriously, solder braid really is magic. There's more to say, and a ton more to do, but that's enough for now. 
+But seriously, solder braid really is magic. There's more to say, and a ton more to do, but that's enough for now.
