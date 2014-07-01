@@ -1,0 +1,15 @@
+---
+layout: post
+title: buttons buttons buttons
+date: 2014-06-29 18:05:49 -0700
+---
+
+So, with the watch assembled and largely working, work on it slowed a bit. I didn't want to break it. I added some buttons, that didn't do much, and left it, stable, for a week or so. I worked on the schematic for version 2.0, a.k.a. the DVT. I routed the copper for most of it, too; I have some things left to add. Using I2C for a lot of things, since there are only 7 I/O pins on the RFduino, and I'm still one pin short. There are tools for that, at least.
+
+Speaking of I/O, buttons! In order to get things working, I couldn't just hook up one side of the switch to 3v and the other to the digital pin. That would be too easy. There are a lot of factors in play here. This is worth a little diversion. I come from software, where by comparison we live in a world of platonic ideals, where 1 always equals 1. Hardware is harder. For starters, the digital pins don't read 0v when in their natural state. You have to use either a pullup or a pulldown resistor to get a 1 or a 0.
+
+Then, interrupts, oy! Somewhere in the libraries I'm using, there's some interrupt driven thing that was causing the watch to freeze randomly after pressing the button. Not all the time, but probably 1 time in 10. I wrapped my whole loop function in noInterrupt() to fix it. The code is on github here: "https://github.com/mattmills/oswatch":https://github.com/mattmills/oswatch . It will probably change a lot while I'm adding features and improvements.
+
+Next up, hopefully in the next couple weeks, I'll have the DVT schematic and gerbers. There's not a ton left to do, basically wiring in the screen and accelerometer, and maybe a RTC if there's room. 8 mil traces are tiny, but I'm leaving basically half the case for battery. The original plan was for a 35x35mm final board, and I've got that down to 35x18mm, which will make the whole watch thinner and more wearable. I'll also post the Fritzing files, which may be of use if anybody wants to roll their own hardware. It's limited to a 2 layer board, which kinda sucks, but it's doable.
+
+That's all for now. More news when there's more to report. 
