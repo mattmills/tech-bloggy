@@ -1,0 +1,20 @@
+---
+layout: post
+title: some words about a case
+date: 2014-07-02 22:41:19 -0700
+---
+
+So, I've made like three cases so far, "case" being the lingo for the container a watch goes in. I don't have a 3D printer or a machine shop, so I'm limited to what I can hand fabricate. That said, I have a long history making things with my hands, and I've been able to make a couple different things, the last of which is actually not that bad.
+
+The first one was metal, which was ok, except I was holding the circut boards in with tape, and metal blocks radio signals. Not ideal, but for the time that I was just wearing it as a timepiece, it was ok. The band was attached with wires looped through holes; imagine a staple, wrapping around the band and through the metal.
+
+The next case was all acrylic; I had the idea to make a laminate case by cutting the inside holes with a dremel; this turned out to be way too much work. Acrylic kind of sucks as a material for fine work. You can cut arbitrary streight lines pretty easily, so I made a bunch of rectangles, and made that into a box with some superglue. One side I left open, with a bit of the two sides sticking out, and cut grooves so I could make a slide-in cover out of aluminum. I noticed after wearing it for a bit that it had super sharp corners, so I sanded all the edges so they don't gouge random people on the bart (or my wife).
+
+Then, of course, I broke that. I was trying to drill holes for buttons, and the top came off. So, instead of trying to fix it, I went back to the drawing board, and thought for a little while, and came up with my favorite so far. A laminate design like the second case, but instead of using acrylic for the middle sections, I used gasket material, which is cuttable with an X-acto knife. The top and bottom are acrylic, and it's held together by the four bolts you see in the picture.
+
+I could continue to work on little stuff like this indefinitely, but to make new features, I need to add to the circuts, which has become inpossible on the perf board. It's overworked and out of room. I'm calling a halt to development on this iteration, and focusing on the schematic and board for the next major version.
+
+<div class="center">
+  <img src='https://farm6.staticflickr.com/5571/14376247400_2b149e0f22_h.jpg' />
+  <img src='https://farm4.staticflickr.com/3904/14559537931_42974a432a_h.jpg' />
+</div>
