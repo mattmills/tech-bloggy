@@ -30,10 +30,12 @@ div.hr {
   height: 10px;
   border-bottom: 1px solid black;
 }
-p.caption {
-  font-size: 50%;
-  fon
+
+.caption {
+  font-size: 70%;
+  font-style: italic;
 }
+
 hr {
   margin-top: 10px;
   margin-bottom: 10px;

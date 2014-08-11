@@ -1,0 +1,32 @@
+---
+layout: post
+title: minimum viable reflow oven
+date: 2014-08-10 19:43:08 -0700
+---
+
+So: I totally stole the idea for this thing from all over the place. There are "dozens":http://hackaday.com/2014/06/16/reflow-oven-controller-with-graphic-lcd/ "of":http://hackaday.com/2014/02/22/smart-reflow-oven-is-over-engineered/ "tutorials":http://hackaday.com/2013/11/21/a-pair-of-toaster-reflow-oven-builds/ about how to build a reflow oven with a toaster oven. By far the coolest is the "Halogen Lamp reflow with low-temp solder paste":https://www.youtube.com/watch?v=hVxDJbmCN8o, but assuming you only have regular paste, what I've done will also work. Note: I'm moving to the low temp stuff for future builds because it's faster and easier to work with.
+
+<div class="center">
+  <img src="https://farm6.staticflickr.com/5577/14880023224_0380bc3abe_h.jpg">
+  <div class="caption">The breadboard all wired up. The big green phone wire is running to the power relay.</div>
+</div>
+
+First, supplies: You'll need a toaster oven. I ordered one "from the big river":http://www.amazon.com/gp/product/B00AZSZYTO/ref=oh_aui_detailpage_o04_s00?ie=UTF8&psc=1 , but anything that's functioning and has both top and bottom elements should work just fine. Don't use it for food afterwards; not only is the metal in solder toxic, but the fumes from the flux are also not great. There's probably an MSDS around somewhere, possibly from wherever you can buy solder paste, that describes the precautions you should take.
+
+Second, you'll need some way of measuring the temperature inside the oven accurately. I got a "thermocouple":https://www.adafruit.com/products/270 and an "amp":https://www.adafruit.com/products/1727 from adafruit, but you could also hack a kitchen thermometer. They're less accurate, but cheaper. I went for accuracy here.
+
+<div class="center">
+  <img src="https://farm4.staticflickr.com/3873/14695871188_110a0d63bf_h.jpg">
+  <div class="caption">Oven in use.</div>
+</div>
+
+Third, you'll need some way of turning the power off and on. Some people have observed that toaster ovens have perfectly good knobs on the front, and you can get away with just turning it off and on that way. I'm lazy, and I have a short attention span, so I got a "powerswitch tail":https://www.adafruit.com/product/268. It's a pretty nifty isolated relay; it connects to a digital pin, and when you bring it high, it turns on the power.
+
+Lastly, you'll need a microcontroller of some sort. I used a Spark core, because it was on hand and easy to program. I didn't even change the firmware. I used the tinker firmware and some ruby code to talk to the spark API. I could have used a raspberry pi, an arduino, whatever; the requirements for this project are super minimal. Really, you need about one-second resolution on the thermocouple, and the same on the power. My code is here: "https://gist.github.com/mattmills/746bc1e8fed75ea413ae":https://gist.github.com/mattmills/746bc1e8fed75ea413ae (note that I've taken out my access tokens). Note that the values for temperature are probably unique to my oven and room temperature; if you make one of these, definitely do a test run.
+
+<div class="center">
+  <img src="https://farm4.staticflickr.com/3857/14859492756_e754240264_h.jpg">
+  <div class="caption">A finished board. There were a few bridges, but this was the first effort. </div>
+</div>
+
+Assembly: I didn't even bother with a permanent board. The Spark core is dead useful, and I don't want it tied up in one device. I stuck it in a breadboard, wired up the amp to power and an analog pin. Wired the powertail's control lines to a digital pin and ground, and plugged everything in. I ran the code once, tuned when to stop heating for both stages, and then ran it again. The curve was in the bounds of workable, so I put in a test board, and it worked :)
