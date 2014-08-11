@@ -1,0 +1,19 @@
+---
+layout: post
+title: project status
+date: 2014-08-10 23:42:21 -0700
+---
+
+So, currently, the project is a bit all over the place, with a lot of things happening all at once. I'm hopeful that by writing them all down, I can get some sleep. _edit: totally worked!_
+
+First things first: the board design I was so happy about turned out to be unworkable, mostly because the battery was backwards on the schematic, so I connected a bunch of stuff to ground that shouldn't have been. I reworked it, but I'm holding off on publishing a revision until I know it works this time. The new version is larger, taking up the full area of the screen, roughly. It's also one-sided; the bottom of the board only has some traces. This will make it thinner overall, so that's a bonus.
+
+While I'm waiting for that to come in, I've been thinking about what constitutes 'done' for this watch. I'd like to do one more prototype, at least, with a backlight and a more sophisiticated accelerometer. I'm hopeful that the real time clock will let me actually put the watch in low power mode between updates, and save battery. So 'done' for me is dark readable, waterproof, no dissassembly to upload new firmware. Battery life somewhere in the range of 5-7 days, which I may have to acheive with a larger battery.
+
+Case design is another area that needs some work. I'm thinking in a lot of directions here, and there are some interesting engineering limitations. RF and metal cases don't go well together, but I may test using metal anyway, to see what kind of attenuation I get. The face will be open and nonconductive, at least. I'd also like to do a women's version, but it'll have to be a two-sided, four-layer board. I have no idea what I'd use for a display; I'd want something roughly 1/3rd the size of what I'm doing now. It's different enough that it should probably be shelved in favor of getting _something_ done. Maybe size isn't even an issue, and it's just style.
+
+A word about solder paste and tiny packages with pins hidden under the chip: use less. That said, you can hand solder 0.5mm traces, using the methods in "this video":https://www.youtube.com/watch?v=5uiroWBkdFY. My first pass with the reflow oven, I had a ton of solder bridges; I used too much solder, and I was a little sloppy putting it on. So, don't do that. Syringes seem like a good idea, but really, the "toothpick method":https://www.youtube.com/watch?v=h-NG8Vk1aC0 works really well; I used a needle, and it gives pretty good control of where paste goes and how much you apply.
+
+The other thing I've learned is about supplies: the adage "If you need one, order 10" is completely true for small components. I've been wrong about a lot of things, including the number of resistors and capacitors I needed. 0401 parts are _tiny_, and I've also lost at least one of them. I damaged one ZIF connector as well. So: always order extra. I'd say order ten of anything that costs less than a dollar, or is smaller than 2mm^2.
+
+That's all for now. The new boards arrive tomorrow, so look for a post on tuesday with photos and hopefully a new, working prototype. 
