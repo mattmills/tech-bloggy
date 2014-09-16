@@ -1,0 +1,32 @@
+---
+layout: post
+title: finally a working power supply
+date: 2014-09-15 22:00:59 -0700
+---
+
+so, since I last updated here on the blog, a lot has been going on. I got the 2.1 revision of the board, single sided, and it had another couple errors in the power supply, and I discovered while hacking that I'd also ordered the wrong power regulators, 3v instead of 5v. So, I ordered another round of boards, this time re-reading all the datasheets and example circuts twice. I got it right.
+
+<div class="center">
+<img src="https://farm4.staticflickr.com/3885/15231982546_3f875772fd_h.jpg" alt="Watch photos, version 2.2"><div class="caption">The circut board with hand-applied solder paste. Had to do a bit of cleanup on this one.</div>
+</div>
+
+That said, the board still has some errata. The shift register isn't properly configured, and so it eats power, and the accelerometer is also wrong in a couple ways. Also, the screen connector is too close to the edge of the board. I'm working on these defects and some improvements; LED lights for the screen side of the board, to serve as backlights, a different accelerometer altogether, and maybe a vibration motor, for notfications.
+
+<div class="center">
+<img src="https://farm4.staticflickr.com/3905/15231982176_85602ed140_h.jpg"  alt="Watch photos, version 2.2">
+<div class="caption">Exploded v2.2, before I'd build the first enclosure. The ribbon cable on the display is super delicate; I've reinforced mine with tape.</div></div>
+
+I have managed to make a much smaller, fuller featured version than the old one. The current version uses the real time clock, has a 3x larger battery, and is 5mm thinner. I've removed the shift register, and the whole thing is on track to run through wednesday evening, having been last fully charged on saturday at 6pm. If I'm a little lucky, it'll run through thursday morning.
+
+<div class="center">
+  <img src="https://farm6.staticflickr.com/5596/15254593172_b2e99efaee_h.jpg" alt="Watch photos, version 2.2"><div class="caption">Case #4, with rubber sides. I wasn't a huge fan of the rubber, so...</div></div>
+
+On the software front, I've written a new analog watchface, with rectangular hands instead of lines, and nicer hour markers. As I mentioned above, I got the RTC working with this board release, so now I shouldn't have to reset it every morning, assuming I don't let the battery die all the way. I'm to the point where I need to take an inventory of the parts on hand; I have a probably 2/3rds of the next watch here already, just a few leftovers to pick up (a couple more sharp LCDs, maybe another extra rfduino).
+
+
+<div class="center">
+<img src="https://farm4.staticflickr.com/3843/15068224119_11f8693566_h.jpg" alt="Watch photos, version 2.2"><div class="caption">Case #5, with plexiglass on 5 sides. It's a little chunkier, but not bad. Stainless steel back, and corners for strength.</div></div>
+
+I think that's all for now. Keep an eye on the "twitter":http://twitter.com/ourglasswatch
+<div class="center">
+</div>
