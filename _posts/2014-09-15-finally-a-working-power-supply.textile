@@ -27,6 +27,6 @@ On the software front, I've written a new analog watchface, with rectangular han
 <div class="center">
 <img src="https://farm4.staticflickr.com/3843/15068224119_11f8693566_h.jpg" alt="Watch photos, version 2.2"><div class="caption">Case #5, with plexiglass on 5 sides. It's a little chunkier, but not bad. Stainless steel back, and corners for strength.</div></div>
 
-I think that's all for now. Keep an eye on the "twitter":http://twitter.com/ourglasswatch
+I think that's all for now. Keep an eye on the "twitter":http://twitter.com/ourglasswatch for mroe frequent updates. 
 <div class="center">
 </div>
