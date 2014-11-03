@@ -6,11 +6,11 @@ date: 2014-11-02 22:43:51 -0800
 
 First, some good news: the mark 3/4 (I've lost track a bit) is done, and looks fairly identical to the mark 2. It has some nice internal differences, though. To start, it has a working accelerometer. This means that I can, in theory, implement a simple pedometer and sleep monitor. Unfortunately, all the howtos for that are not on the public internet, at least not that I've found yet.
 
-There are a couple of ways I can think of to do it. The first approach I tried was to just count up a step when the g forces go over a certain threshold. To save you time: That doesn't work.
+I can think of a couple of ways to do it. The first approach I tried was to just count up a step when the g forces go over a certain threshold. To save you time: That doesn't work.
 
-There are a couple of other approaches though, that might work. The first thing I though of was doing bayesian analysis, saving the last few seconds of movement, and deciding with some logic if the numbers look like a step. This isn't impossible, but I'm afraid it'd eat processor cycles and memory. If I ever get the phone app running, I can dump the data to a CSV and do visualization and patern mapping in ruby, which has nicer libraries for that sort of thing. Deriving them from first principal souds like a pain in the ass.
+The next thing I though of was doing bayesian analysis, saving the last few seconds of movement, and deciding with some logic if the numbers look like a step. This isn't impossible, but I'm afraid it'd eat processor cycles and memory. If I ever get the phone app running, I can dump the data to a CSV and do visualization and patern mapping in ruby, which has nicer libraries for that sort of thing. Deriving them from first principal souds like a pain in the ass.
 
-The other, simpler method, is to extend the first non-working method a bit. I also have a gyroscope, so I always know where down is; I could subtract the 1g of force that gives me, and then the spikes up and down should be really obvious. Also, it's cheaper in the processing department. I'll probably try that next.
+The other, simpler method, is to extend the first non-working method a bit: I also have a gyroscope, so I always know where down is; I could subtract the 1g of force that gives me, and then the spikes up and down should be really obvious. Also, it's cheaper in the processing department. I'll probably try that next.
 
 Speaking of processing... I've just about outgrown the RFduino. I was going to use a shift register to make up for the lack of I/O, but there are a number of other problems with it:
 
@@ -18,4 +18,4 @@ Speaking of processing... I've just about outgrown the RFduino. I was going to u
   * Lack of compatibility; every library I use has to be modified, sometimes drastically.
   * Size: it takes up a lot of board real estate, which means I can't arrange things as I see fit.
 
-There are two contenders to replace it: either an AVR like the ATMEGA1281, or a STM32F405RG underclocked and running "micropython":https://micropython.org . It would be insanely cool to be running python. It's enough of a hook that writing all the libraries over from scratch doesn't seem so bad. But "Arduino compatible watch" also has a nice ring to it. There's plenty of info to make designing either into the watch not bad, and I could then use an nRF8001 for the bluetooth. The chip cout stays roughly the same, but with a ton more flexibility.     
+There are two contenders to replace it: either an AVR like the ATMEGA1281, or a STM32F405RG underclocked and running "micropython":https://micropython.org . It would be insanely cool to be running python. It's enough of a hook that writing all the libraries over from scratch doesn't seem so bad. But "Arduino compatible watch" also has a nice ring to it. There's plenty of info to make designing either into the watch not bad, and I could then use an nRF8001 for the bluetooth. The chip cout stays roughly the same, but with a ton more flexibility.
