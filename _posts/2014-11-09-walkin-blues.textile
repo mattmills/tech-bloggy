@@ -9,12 +9,3 @@ The work continues apace. I've decided to go with an AVR, mostly because the oth
 Speaking of well-written, the code for counting steps is coming along. At first, I was doing dumb stuff that didn't work at all, and now I've got some slightly smarter stuff that may work with some more tuning... we'll see. I'm aiming for greater than 95% accuracy, and right now I'm getting about 50% steps, and 10% false positives, at least on days where I walk a normal ammount for me (about 4 miles). I'm using a moving average over 5 seconds, and counting anything that's more than a standard deviation from the mean as a step. I've set a lower bound on the g forces, as well.
 
 There are a couple things I can do to improve on this; I'll put out the library (probably a couple statistics classes and a step-specific logic class) once it's in a better form. Right now, it's jsut One Big Method, which I know is dumb. Things to tune: how much history we have, and how we compare it to past things we thought might be steps. I have ideas, but I am sleepy so they may all be dumb. We'll see in the morning.
-
-<div class="center">
-  <img src='http://photomattmills.com/images/loose-ends/0001.jpg' />
-  <img src='http://photomattmills.com/images/loose-ends/0002.jpg' />
-  <img src='http://photomattmills.com/images/loose-ends/0003.jpg' />
-  <img src='http://photomattmills.com/images/loose-ends/0004.jpg' />
-  <img src='http://photomattmills.com/images/loose-ends/0005.jpg' />
-  <img src='http://photomattmills.com/images/loose-ends/0006.jpg' />
-</div>
