@@ -1,0 +1,9 @@
+---
+layout: post
+title: further work on v4
+date: 2014-12-02 23:47:32 +0000
+---
+
+So far, there's not a lot to show for v4 of the watch, just a lot of ideas. I've figured out the hook, though: a smart watch that you never have to charge. Basically, I have to pull about 500uA/hr (maybe as low as 100uA with the right sleep modes) out of thin air, and it'll never have to be plugged in. You can't get something for nothing, but most of the time people have an energy source all around them: Light. A calculator solar cell like "this one":http://www.scientificsonline.com/product/space-industry-super-solar-cells-25ma (second one on the page) will, I think, produce enough power.
+
+To get there, you have to do a bunch of stuff. The accelerometer I'm using has sleep modes, so we'll turn those on when we're not taking a measurement, and disable the power hungry gyroscope altogether. The processor can be slowed down to 1mhz and also slept for intervals. The RTC doesn't have any low power modes, but it's already pretty low-powered. The screen hardly uses any power, but LEDs for backlighting will; we'll need to be careful about those. The radio, according to the data sheet, only consumes a lot of power when it's advertising; once paired, it'll be in the 10uA (average) range. Processor, radio, accelerometer, clock, screen, backlight. 
